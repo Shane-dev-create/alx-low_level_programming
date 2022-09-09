@@ -13,6 +13,7 @@ while (a < 10)
 printf("%d", a);
 a++;
 }
+putchar('\n');
 return (0);
 }
 
