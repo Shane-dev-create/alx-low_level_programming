@@ -7,16 +7,15 @@
  */
 int main(void)
 {
+char *myChar = "_putchar";
 
-putchar('_');
-putchar('p');
-putchar('u');
-putchar('t');
-putchar('c');
-putchar('h');
-putchar('a');
-putchar('r');
+while (*myChar)
+{
+putchar(*myChar);
+myChar++;
+}
 putchar('\n');
 return (0);
 }
+
 
