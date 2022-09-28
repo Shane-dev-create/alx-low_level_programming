@@ -9,22 +9,17 @@
 
 int prime_check(int x, int z)
 {
-	if (x <= 1)
+	if (z < 2 || z % x == 0)
 	{
 		return (0);
 	}
-	else if (x % z == 0 && z > 1)
+	else if (x > z / 2)
 	{
-		return (0);
-	}
-	else if
-	{
-		((x / z) < z)
-			return (1);
+		return (1);
 	}
 	else
 	{
-		return (prime_check(x, z + 1));
+		return (prime_check(z, x + 1));
 	}
 }
 
