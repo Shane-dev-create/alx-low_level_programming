@@ -2,17 +2,19 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+#define UNUSED(x) (void)(x)
 
 /**
- * num_check - checks if string contains anything other than number
+ * num_check -> checks if string contains anything other than number
  * @s: string to check
- * Return: boolean
+ * Return: 0 if true 1 if false
  */
+
 int num_check(char *s)
 {
-	int i = 0;
+	int i;
 
-	for (; s[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (!isdigit(s[i]))
 		{
@@ -21,6 +23,7 @@ int num_check(char *s)
 	}
 	return (1);
 }
+
 /**
  * main -> prints the result of adding positive numbers
  * @argc: argument
