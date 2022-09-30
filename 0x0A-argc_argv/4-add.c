@@ -1,61 +1,32 @@
-#include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
-#define UNUSED(x) (void)(x)
 
 /**
- * num_check -> checks if string contains anything other than number
- * @s: string to check
- * Return: 0 if true 1 if false
+ * main -> Prints the addition of positive numbers,
+ * @argc: The number of arguments passed to the program.
+ * @argv: An array of pointers to the arguments.
+ * Return: 0 if no characters are found otherwise 1 if characters are found
  */
 
-int num_check(char *s)
+int main(int argc, char *argv[])
 {
-	int i;
+	int num, digit, sum = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (num = 1; num < argc; num++)
 	{
-		if (!isdigit(s[i]))
+		for (digit = 0; argv[num][digit]; digit++)
 		{
-			return (0);
-		}
-	}
-	return (1);
-}
-
-/**
- * main -> prints the result of adding positive numbers
- * @argc: argument
- * @argv: number of arguments
- *Return: always 0
- */
-int main(int argc, char  *argv[])
-{
-	int i;
-	int result = 0;
-
-	if (argc > 1)
-	{
-		for (i = 1; i < argc; i++)
-		{
-			if (num_check(argv[i]))
-			{
-				result += atoi(argv[i]);
-			}
-			else
+			if (argv[num][digit] < '0' || argv[num][digit] > '9')
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
-		printf("%d\n", result);
-		return (0);
-	}
-	else
-	{
-		printf("%d\n", 0);
-		return (1);
+
+		sum += atoi(argv[num]);
 	}
 
+	printf("%d\n", sum);
+
+	return (0);
 }
