@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <ctype.h>
+#include <string.h>
 
 /**
  * num_check - checks if string contains anything other than number
