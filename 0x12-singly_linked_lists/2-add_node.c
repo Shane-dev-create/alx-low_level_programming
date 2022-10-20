@@ -1,10 +1,11 @@
 #include "lists.h"
+#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
 /**
- * add_node - adds a new node at the beginning of a list
- * @head: pointer to head address 
+ * add_node -> adds a new node at the beginning of a list
+ * @head: pointer to head address
  * @str: string to be added to list
  * Return: returns an address of new node else NULL if function fails
  */
