@@ -3,10 +3,12 @@
 /**
  * interpolation_search - searches for a value in a sorted array of integers
  * using an interpolation search algorithm
- * @array: pointer to first element of array to search in
- * @size: number of elements in array to search
+ * @array: pointer to first element of array to search in 
+ * @size: number of elements in the array
  * @value: value to search for
- * Return: index containing `value`, or -1 if `value` not found or NULL
+ *
+ * Return: first index containing value or -1 if value not found or
+ * array is NULL
  */
 
 int interpolation_search(int *array, size_t size, int value)
@@ -41,4 +43,3 @@ int interpolation_search(int *array, size_t size, int value)
 	printf("Value checked array[%lu] is out of range\n", ps);
 	return (-1);
 }
-
